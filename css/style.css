@@ -1,0 +1,281 @@
+/*created by David Sun 2015.11.29*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+/*style of nav*/
+nav ul:after {
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+}
+nav ul{
+    zoom: 1;
+}
+nav li {
+    float: left;
+    padding: 5px 10px;
+    list-style: none;
+    color:#fff;
+}
+
+nav li:first-child{
+    background: #337ab7;
+}
+
+nav li:nth-child(2){
+    background: #5cb85c;
+}
+
+nav li:nth-child(3){
+    background: #f0ad4e;
+}
+
+nav li:last-child{
+    background: #d9534f;
+}
+
+nav li:hover{
+    background:#5bc0de;
+    color:#fff;
+    transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+}
+
+
+/*style of jumbotron*/
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url(https://cn.student.com/media/cache/hero_banner_desktop/mstr/country/australia/city/melbourne/property/student-village/image);
+    background-size: cover;
+}
+.jumbotron-content {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #fff;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+.jumbotron-content > div {
+    font-size: 16px;
+}
+
+
+
+
+
+/*style of introduction*/
+.introduction{
+    width:100%;
+}
+.introduction-detail {
+    float: right;
+    width:40%;
+    padding:30px 10px 20px 0;
+}
+.introduction-detail >div:first-child,
+.introduction-detail >div:nth-child(2),
+.introduction-detail >div:last-child{
+    margin: 0 20px 20px 10px;
+}
+.introduction-detail > div:nth-child(3){
+    display: none;
+}
+.contact {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 4px;
+    animation: changeSize 3s infinite cubic-bezier(0.85,0,1,1);
+    -webkit-animation: changeSize 3s infinite cubic-bezier(0.85,0,1,1);
+    -o-animation: changeSize 3s infinite cubic-bezier(0.85,0,1,1);
+    -moz-animation: changeSize 3s infinite cubic-bezier(0.85,0,1,1);
+
+}
+
+@keyframes changeSize{
+    0%{
+        transform:scale(1);
+
+    }
+    50%{
+        transform:scale(1.2);
+        background:#5bc0de;
+        color:#fff;
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+@-webkit-keyframes changeSize{
+    0%{
+        -webkit-transform:scale(1);
+
+    }
+    50%{
+        -webkit-transform:scale(1.2);
+        background:#5bc0de;
+        color:#fff;
+    }
+    100%{
+        -webkit-transform:scale(1);
+    }
+}
+
+@-o-keyframes changeSize{
+    0%{
+        -o-transform:scale(1);
+
+    }
+    50%{
+        -o-transform:scale(1.2);
+        background:#5bc0de;
+        color:#fff;
+    }
+    100%{
+        -o-transform:scale(1);
+    }
+}
+
+@-moz-keyframes changeSize{
+    0%{
+        -moz-transform:scale(1);
+
+    }
+    50%{
+        -moz-transform:scale(1.1);
+        background:#5bc0de;
+        color:#fff;
+    }
+    100%{
+        -moz-transform:scale(1);
+    }
+}
+
+.introduction >div:nth-child(2){
+    width:60%;
+    padding:30px 30px 20px 10px;
+}
+
+
+
+
+/*style of room type title*/
+.room-title{
+    padding-left:10px;
+}
+
+
+
+/*style of room type menu*/
+.room-type {
+    width: 180px;
+    float: left;
+    margin:10px 30px 0 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.room-type li:hover{
+    background:#f0ad4e;
+    color:#fff;
+    transform:scaleY(1.5);
+    -webkit-transform:scaleY(1.5);
+    -o-transform:scaleY(1.5);
+    -moz-transform:scaleY(1.5);
+    -ms-transform:scaleY(1.5);
+}
+.room-type-select {
+    display: none;
+}
+
+.selectedRoom{
+    background:#5bc0de;
+    color:#fff;
+}
+
+
+/*style of room description*/
+.room-desc {
+    display: flex;
+    flex-flow: column;
+    width:60%;
+    margin-top:10px;
+}
+.room-desc header i {
+    float: left;
+    font-size: 45px;
+    padding-right: 10px;
+}
+
+
+
+summary{
+    margin: 10px 20px 10px 0;
+}
+.fa {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.room-desc >div{
+    margin: 10px 10px 30px 0;
+}
+
+.facilities li {
+    display: inline-block;
+    width: 150px;
+    padding: 10px 0;
+}
+
+@media screen and (max-width:640px) {
+    .nav-accommodations{
+        display: none;
+    }
+    .introduction-detail > div:nth-child(3){
+        display: block;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+    .introduction > div:last-child {
+        display: none;
+    }
+    .introduction-detail {
+        width: 90%;
+        float:left;
+    }
+
+    .room-type {
+        display: none;
+    }
+    .room-type-select {
+        display: block;
+        width:80%;
+        height:30px;
+        margin:10px;
+    }
+    .room-desc {
+        float: left;
+        width:100%;
+        margin-left: 10px;
+    }
+}
+
